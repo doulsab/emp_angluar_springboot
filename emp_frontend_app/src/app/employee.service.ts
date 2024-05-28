@@ -11,7 +11,13 @@ export class EmployeeService {
 
   constructor(private httpClint: HttpClient) {}
 
+  // Get all list of employee
   getEmployeeList(): Observable<Employee[]> {
     return this.httpClint.get<Employee[]>(`${this.baseUrl}`);
+  }
+
+  // create a method to take the employee data
+  createEmployee(employee: Employee): Observable<Object> {
+    return this.httpClint.post<Employee>(`${this.baseUrl}`, employee);
   }
 }

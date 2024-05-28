@@ -1,5 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="employees" routerLinkActive="active" class="nav-link">
+        Employee List</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="create-employee"
+        routerLinkActive="active"
+        class="nav-link"
+      >
+        Create Employee</a
+      >
+    </li>
+  </ul>
+</nav>
+
 <h3 class="text-center">{{ title }}</h3>
 <hr />
 <div class="container">
-  <app-employee-list></app-employee-list>
+  <!-- 3.Step give below tag to access -->
+  <!-- <app-employee-list></app-employee-list> -->
+  <router-outlet></router-outlet>
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved 2024 &#64; Doulsab Dodamani</span>
+  </div>
+</footer>
